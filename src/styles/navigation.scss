@@ -8,7 +8,7 @@
   padding: 0;
 
   @media (max-width: $card-width*3 + 2*$cards-gap-x) {
-    grid-template-columns: repeat(auto-fill, 757px);
+    grid-template-columns: repeat(auto-fill, $navigationBarWidth);
     margin-left: 25px;
   }
 
