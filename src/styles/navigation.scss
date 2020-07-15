@@ -1,10 +1,16 @@
-$header-hieght: 60px;
+@import "variables";
 
 .navigation {
   list-style-type: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(8, auto);
   margin: 0;
   padding: 0;
+
+  @media (max-width: $card-width*3 + 2*$cards-gap-x) {
+    grid-template-columns: repeat(auto-fill, $navigationBarWidth);
+    margin-left: 25px;
+  }
 
   &__link {
     position: relative;
@@ -16,6 +22,11 @@ $header-hieght: 60px;
     color: #000;
     height: $header-hieght;
     transition: color 1s;
+
+    @media (max-width: $card-width*3 + 2*$cards-gap-x) {
+      height: $header-hieght/2;
+      margin: 0;
+    }
   }
 
   &__link:hover {

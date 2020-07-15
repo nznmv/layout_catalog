@@ -1,22 +1,19 @@
-$card-width:200px;
-$card-height:403px;
-$cards-gap-y:50px;
-$cards-gap-x:48px;
-$card-border-radius:5px;
-$image-border-color:#f3f3f3;
-$image-border: 3px;
-$image-padding: 13px;
-
+@import "variables";
 @import "buy button";
 @import "stars block";
 
 .main {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  justify-content: center;
   max-width: ($card-width*4)+($cards-gap-x*3) ;
-  margin: 50px auto;
+  row-gap: $cards-gap-x;
+  column-gap: $cards-gap-y;
+  grid-template-columns: repeat($maxColumnCount, $card-width);
+  margin: 0 auto;
+
+  @media (max-width: $blockMaxWidth) {
+    grid-template-columns: repeat(auto-fill, $card-width);
+  }
 }
 
 .main-card {
@@ -27,6 +24,7 @@ $image-padding: 13px;
   max-width: $card-width;
   border-radius: $card-border-radius;
   border: 1px solid $image-border-color;
+
 }
 
 .main-card__image {
@@ -56,10 +54,6 @@ $image-padding: 13px;
   font-size: 11px;
   line-height: 13px;
   margin: 0 0 15px;
-}
-
-.main-card:nth-child(n+5) {
-  margin-top: 50px;
 }
 
 .main-card__rating {
