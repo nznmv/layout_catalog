@@ -1,0 +1,17 @@
+//main
+$moyo-blue: #00acdc;
+$header-text-size: 12px;
+//navigation
+$header-hieght: 60px;
+//main
+$card-width:200px;
+$card-height:403px;
+$cards-gap-y:48px;
+$cards-gap-x:50px;
+$card-border-radius:5px;
+$image-border-color:#f3f3f3;
+$image-border: 3px;
+$image-padding: 13px;
+$maxColumnCount:4;
+$blockMaxWidth: $card-width * $maxColumnCount +
+  ($maxColumnCount - 1)*$cards-gap-x;

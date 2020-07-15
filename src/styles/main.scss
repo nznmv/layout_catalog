@@ -1,12 +1,9 @@
-$moyo-blue: #00acdc;
-$header-text-size: 12px;
-
+@import "variables";
 @import "header";
 @import "product-card";
 @import "navigation";
 
 html {
-  margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
